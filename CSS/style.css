@@ -1,3 +1,10 @@
+@media (max-width: 480px) {
+  .container {
+      padding: 15px;
+      border-radius: 10px;
+  }
+}
+
 @font-face {
     font-family: 'Cairo'; /* Coloque um nome para a fonte */
     src: url('../FONT/Cairo-Medium.ttf');

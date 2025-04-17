@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'Cairo'; /* Coloque um nome para a fonte */
+    src: url('/FONT/Cairo-Medium.ttf');
+    font-weight: normal; /* Peso da fonte */
+    font-style: normal; /* Estilo da fonte (normal, italic, bold, etc.) */
+}
+
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da tela */
+    margin: 0; /* Remove margens padrão do body */
+    background-image: url(/IMG/12802.jpg);
+    background-size: cover;
+    overflow: hidden; /* Remove barras de rolagem */
+}
+
+body {
+    display: flex; /* Ativa o Flexbox no body */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.container {
+    visibility: hidden;
+    height: 450px; /* Altura fixa em pixels */
+    width: 440px; /* Largura fixa em pixels */
+    padding: 20px; /* Espaçamento interno da div */
+    background-color: transparent; /* Cor de fundo da div */
+    backdrop-filter: blur(10px); /* Aplica um desfoque de 10 pixels */
+    text-align: center; /* Centraliza o texto dentro da div */
+    box-shadow: 0 -5px 50px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+    border-radius: 5%; /* Bordas arredondadas */
+    z-index: 1;
+}
+
+.login {
+    align-items: center;
+    text-shadow: 0px 1px 0 black;
+    font-family: 'Cairo';
+    font-size: 28pt;
+    color: aliceblue;
+}
+
+.e_email {
+    visibility: hidden;
+    position: absolute;
+    font-family: 'Cairo';
+    font-size: 10pt;
+    color: red;
+    left: 131px; /* Distância do lado esquerdo do container */
+    top: 211px; /* Distância do topo do container */
+    /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
+}
+
+.e_senha {
+    visibility: hidden;
+    position: absolute;
+    font-family: 'Cairo';
+    font-size: 10pt;
+    color: red;
+    left: 130px; /* Distância do lado esquerdo do container */
+    top: 306px; /* Distância do topo do container */
+    /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
+}
+
+.entrar {
+    left: 190px;
+    top: 350px;
+    width: 90px;
+    position: absolute;
+    font-family: 'Cairo';
+    font-size: 13pt; /* Diminuído para um tamanho menor */
+    padding: 6px 12px; /* Ajustado para 6px em cima e embaixo, 12px nas laterais */
+    background-color: #f0f0f0; /* Cor de fundo padrão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é um botão */
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transições mais suaves */
+}
+
+/* Efeito hover para o botão */
+.entrar:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {   
+    text-decoration: underline;  
+}
+
+.esqueceu {
+    text-shadow: 0px 1px 0 black;
+    font-family: 'Cairo';
+    text-align: center;
+    position: relative;
+    top: 235px;
+    left: 0px;
+    color: aliceblue;
+}
+
+.criar {
+    text-shadow: 0px 1px 0 black;
+    font-family: 'Cairo';
+    text-align: center;
+    position: relative;
+    top: 240px;
+    left: -2px;
+    color: aliceblue;
+}
+
+.cadeado_open {
+    position: absolute;
+    top: 290px;
+    left: 345px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.cadeado_closed {
+    position: absolute;
+    top: 290px;
+    left: 345px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* From Uiverse.io by AbanoubMagdy1 */ 
+.wave-group {
+    position: absolute;
+  }
+  
+  .wave-group .input {
+    font-size: 16px;
+    padding: 3px 1px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+  }
+  
+  .wave-group .input:focus {
+    outline: none;
+  }
+  
+  .wave-group .label {
+    color: #e0e0e0;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 110px;
+    top: 47px;
+    display: flex;
+  }
+  
+  .wave-group .label-char {
+    font-family: 'Cairo';
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+  }
+  
+  .wave-group .input:focus ~ label .label-char,
+  .wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color:#e0e0e0;
+  }
+  
+  .wave-group .bar {
+    position: relative;
+    display: block;
+    width: 202px;
+  }
+  
+  .wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--bar-color, #e0e0e0);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .wave-group .bar:before {
+    left: 50%;
+  }
+  
+  .wave-group .bar:after {
+    right: 50%;
+  }
+  
+  .wave-group .input:focus ~ .bar:before,
+  .wave-group .input:focus ~ .bar:after {
+    width: 50%;
+  }
+  /* From Uiverse.io by AbanoubMagdy1 */ 
+
+  .input {
+    position: absolute;
+    left: 110px; /* Distância do lado esquerdo do container */
+    top: 50px; /* Distância do topo do container */
+    /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
+  }
+
+  .inputs {
+    position: absolute;
+    left: 110px; /* Distância do lado esquerdo do container */
+    top: 143px; /* Distância do topo do container */
+    /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
+  }
+
+.wave-groups {
+    position: absolute;
+  }
+  
+  .wave-groups .inputs {
+    font-size: 16px;
+    padding: 3px 1px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+  }
+  
+  .wave-groups .inputs:focus {
+    outline: none;
+  }
+
+  .wave-groups .labels {
+    color:#e0e0e0;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 110px;
+    top: 140px;
+    display: flex;
+  }
+  
+  .wave-groups .label-chars {
+    font-family: 'Cairo';
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+  }
+  
+  .wave-groups .inputs:focus ~ label .label-chars,
+  .wave-groups .inputs:valid ~ label .label-chars {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #e0e0e0;
+  }
+  
+  .wave-groups .bars {
+    position: relative;
+    display: block;
+    width: 202px;
+  }
+  
+  .wave-groups .bars:before,.wave-groups .bars:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: -53px;
+    position: absolute;
+    background: var(--bars-color, #e0e0e0);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .wave-groups .bars:before {
+    left: 50%;
+  }
+  
+  .wave-groups .bars:after {
+    right: 50%;
+  }
+  
+  .wave-groups .inputs:focus ~ .bars:before,
+  .wave-groups .inputs:focus ~ .bars:after {
+    width: 50%;
+  }
+
+  .bars {
+    top:  114px;
+    left: 110px;
+  }
+
+  .bar {
+    top: 75px;
+    left: 110px;
+  }
+
+  .card {
+    visibility: visible;
+    position: absolute;
+    width: 300px;
+    height: 220px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    gap: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+    border-radius: 5%;
+    z-index: 2;
+  }
+  
+  #cookieSvg {
+    position: absolute;
+    top: 25px;
+    width: 50px;
+  }
+  
+  #cookieSvg g path {
+    fill: #e0e0e0;
+  }
+  
+  .cookieHeading {
+    font-family: 'Cairo';
+    text-shadow: 0px 1px 0 black;
+    position: absolute;
+    top: 75px;
+    font-size: 24px;
+    font-weight: 800;
+    color:#e0e0e0;
+  }
+  
+  .cookieDescription {
+    font-family: 'Cairo';
+    text-shadow: 0px 1px 0 black;
+    position: absolute;
+    top: 142px;
+    text-align: center;
+    font-size: 11pt;
+    font-weight: 600;
+    color: #e0e0e0;
+    line-height: 1.1;
+  }
+  
+  .buttonContainer {
+    position: absolute;
+    top: 215px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  
+  .acceptButton {
+    width: 80px;
+    height: 30px;
+    background-color: #7b57ff;
+    transition-duration: .2s;
+    border: none;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+  
+  .declineButton {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(218, 218, 218);
+    transition-duration: .2s;
+    color: rgb(46, 46, 46);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+  
+  .declineButton:hover {
+    background-color: #ebebebce;
+    transition-duration: .2s;
+  }
+  
+  .acceptButton:hover {
+    background-color: #9173ff;
+    transition-duration: .2s;
+  }

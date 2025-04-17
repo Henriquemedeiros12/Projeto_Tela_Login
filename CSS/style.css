@@ -26,20 +26,26 @@ body {
     align-items: center; /* Centraliza verticalmente */
 }
 
-.container {
-    visibility: hidden;
-    height: 450px; /* Altura fixa em pixels */
-    width: 440px; /* Largura fixa em pixels */
-    padding: 20px; /* Espaçamento interno da div */
-    background-color: transparent; /* Cor de fundo da div */
-    backdrop-filter: blur(10px); /* Aplica um desfoque de 10 pixels */
-    text-align: center; /* Centraliza o texto dentro da div */
-    box-shadow: 0 -5px 50px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
-    border-radius: 5%; /* Bordas arredondadas */
-    z-index: 1;
+.container {     
+  visibility: hidden;     
+  height: 450px; /* Altura fixa em pixels */     
+  width: 440px; /* Largura fixa em pixels */     
+  padding: 20px; /* Espaçamento interno da div */     
+  background-color: transparent; /* Cor de fundo da div */     
+  backdrop-filter: blur(10px); /* Aplica um desfoque de 10 pixels */ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    
+  text-align: center; /* Centraliza o texto dentro da div */     
+  box-shadow: 0 -5px 50px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */     
+  border-radius: 5%; /* Bordas arredondadas */     
+  z-index: 1; 
 }
 
 .login {
+    position: absolute;
+    top: 15px;
     align-items: center;
     text-shadow: 0px 1px 0 black;
     font-family: 'Cairo';
@@ -217,14 +223,13 @@ a:hover {
 
   .input {
     position: absolute;
-    left: 110px; /* Distância do lado esquerdo do container */
+
     top: 50px; /* Distância do topo do container */
     /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
   }
 
   .inputs {
     position: absolute;
-    left: 110px; /* Distância do lado esquerdo do container */
     top: 143px; /* Distância do topo do container */
     /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
   }
@@ -304,12 +309,10 @@ a:hover {
 
   .bars {
     top:  114px;
-    left: 110px;
   }
 
   .bar {
     top: 75px;
-    left: 110px;
   }
 
   .card {

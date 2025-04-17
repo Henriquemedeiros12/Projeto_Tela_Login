@@ -76,7 +76,6 @@ body {
 }
 
 .entrar {
-    left: 190px;
     top: 350px;
     width: 90px;
     position: absolute;
@@ -126,22 +125,26 @@ a:hover {
 }
 
 .cadeado_open {
-    position: absolute;
-    top: 285px;
-    left: 350px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    visibility: hidden;
+  position: absolute;
+  top: 61%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  visibility: hidden;
+  margin: 0px 10px;
 }
 
 .cadeado_closed {
-    position: absolute;
-    top: 285px;
-    left: 350px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+  position: absolute;
+  top: 61%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 0px 10px;
 }
 
 /* From Uiverse.io by AbanoubMagdy1 */ 
@@ -223,12 +226,14 @@ a:hover {
     position: absolute;
     top: -50px; /* Distância do topo do container */
     /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
+    margin: 0px 5px;
   }
 
   .inputs {
     position: absolute;
     top: 35px; /* Distância do topo do container */
     /* Você pode ajustar 'top' e 'left' conforme necessário para movê-lo */
+    margin: 0px 5px;
   }
 
 .wave-groups {

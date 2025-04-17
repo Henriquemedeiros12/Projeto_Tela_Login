@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Cairo'; /* Coloque um nome para a fonte */
-    src: url('/FONT/Cairo-Medium.ttf');
+    src: url('../FONT/Cairo-Medium.ttf');
     font-weight: normal; /* Peso da fonte */
     font-style: normal; /* Estilo da fonte (normal, italic, bold, etc.) */
 }

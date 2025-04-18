@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!emailRegex.test(email)) {
             bar.style.setProperty('--bar-color', 'red'); // Altera a borda para vermelha
             emailError.style.visibility = 'visible'; // Mostra a mensagem de erro
-            emailError.textContent.value = emailError; // Mensagem de erro
         } else {
             bar.style.setProperty('--bar-color', '#e0e0e0');
             emailInput.style.border = 'visible'; // Restaura a borda padrão se o email estiver correto
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (senha.length < 8 || senha.length > 12) {
             bars.style.setProperty('--bars-color', 'red'); // Altera a borda para vermelha
             senhaError.style.visibility = 'visible'; // Mostra a mensagem de erro
-            senhaError.textContent.value = senhaError; // Mensagem de erro
         } else {
             bars.style.setProperty('--bars-color', '#e0e0e0');
             senhaInput.style.border = 'visible'; // Restaura a borda padrão se a senha estiver correta
@@ -54,11 +52,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Esconde a mensagem de erro de email ao focar no campo de senha
+    senhaInput.addEventListener('focus', function() {
+        emailError.style.visibility = 'hidden';
+    });
+
+    // Esconde a mensagem de erro de senha ao focar no campo de email
+    emailInput.addEventListener('focus', function() {
+        senhaError.style.visibility = 'hidden';
+    });
+
     // Adiciona ouvintes de eventos
     emailInput.addEventListener('input', validarEmail);
     senhaInput.addEventListener('input', validarSenha);
     entrarButton.addEventListener('click', validarCampos);
 });
+
 
 // script.js
 
